@@ -5,17 +5,12 @@ def gen_id
   UUID.create.to_s.gsub('-','')  
 end
 
-# Until issue http://github.com/seancribbs/ripple/issues#issue/8 is fixed, force
-# the Net::HTTP backend
-class Riak::Client
-  def http
-    @http ||= NetHTTPBackend.new(self)
-  end
-end
-
 # Connect and get a bucket instance
 client = Riak::Client.new
 bucket = client.bucket("test1")
+
+# Ensure bucket is empty. When bugfixed, pass block direct to bucket
+bucket.keys.each {|k| bucket.get(k).delete}
 
 # Create and save a simple JSON object
 new_one = Riak::RObject.new(bucket, gen_id)
@@ -39,7 +34,7 @@ new_two.store
 # Empty Bucket
 #bucket.keys {|k| bucket.get(k).delete}
 
-keys = bucket.keys
+keys = bucket.keys(:reload => true)
 
 keys.each {|k| p bucket.get(k)}
 keys.each {|k| bucket.get(k).delete}
