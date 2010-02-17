@@ -1,9 +1,5 @@
 require 'riak'
-require 'uuid'
-
-def gen_id
-  UUID.create.to_s.gsub('-','')  
-end
+require 'lib/utils'
 
 # Connect and get a bucket instance
 client = Riak::Client.new

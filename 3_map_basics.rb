@@ -1,9 +1,5 @@
 require 'riak'
-require 'uuid'
-
-def gen_id
-  UUID.create.to_s.gsub('-','')  
-end
+require 'lib/utils'
 
 # Connect and get a bucket instance
 client = Riak::Client.new
@@ -29,7 +25,6 @@ new_two.store
 puts "*** Simple Query ***"
 p Riak::MapReduce.new(client).
                 add(bucket.name). # run on all items in bucket
-                # next line is same as map("Riak.mapValuesJson", :keep => true)
                 map("function(v) {
                       // Load the items data, and parse it
                       obj = JSON.parse(v.values[0].data);
