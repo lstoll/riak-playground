@@ -1,18 +1,18 @@
-= Gotchas
+# Gotchas
 
 Content type for json must be application/javascript, not application/json . Also it must use double quotes for strings, single seemingly will silently fail
 
 If you want to have multiple map phases, the first map phase should return [bucket,key] pairs for the next phase
 
-= Some hints
+# Some hints
 
-== Submit a query
+## Submit a query
 
     curl -X POST -H "content-type: application/json" http://localhost:8098/mapred --data @-
 
 Then enter the query json, return, ^D
 
-== Connect an erlang process
+## Connect an erlang process
 
     # replace linc with your machines hostname
     /usr/local/Cellar/riak/0.8/erts-5.7.4/bin/erl -setcookie riak -name linc@127.0.0.1
@@ -26,7 +26,7 @@ Then enter the query json, return, ^D
     (linc@127.0.0.1)3> {ok, C} = riak:client_connect(RiakNode).
     {ok,{riak_client,'riak@127.0.0.1',<<7,217,74,71>>}}
 
-== Bulk delete from an erlang process
+## Bulk delete from an erlang process
 
 This can probably be done more effiecently with key streaming. Look into mapred_bucket
 
