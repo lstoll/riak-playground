@@ -1,0 +1,12 @@
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+Simple map - Select 10 by batch execution time: 10.798442s
+

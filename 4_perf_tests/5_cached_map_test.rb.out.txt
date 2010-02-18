@@ -1,0 +1,25 @@
+lstoll@linc ~/dev/riak/playground/4_perf_tests <master⚡> $ ruby 5_cached_map_test.rb 
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+Simple map - Select 10 by batch execution time: 11.826533s
+lstoll@linc ~/dev/riak/playground/4_perf_tests <master⚡> $ ruby 5_cached_map_test.rb 
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+{"item"=>"one", "batch"=>513}
+Simple map - Select 10 by batch execution time: 4.837789s
+
