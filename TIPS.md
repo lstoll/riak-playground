@@ -34,4 +34,47 @@ This can probably be done more effiecently with key streaming. Look into mapred_
     (linc@127.0.0.1)4> lists:map(fun(Key)->
     (linc@127.0.0.1)4> C:delete(Name, Key, 1)
     (linc@127.0.0.1)4> end, Keys).
+
+
+## Install Innostore
+
+    cd ~/tmp
+    hg clone https://bitbucket.org/basho/innostore/ && cd innostore
+    make
+    mkdir /usr/local/Cellar/riak/0.8/lib/innostore
+    cp -R ebin priv /usr/local/Cellar/riak/0.8/lib/innostore
     
+vi /usr/local/Cellar/riak/0.8/etc/app.config
+
+change
+    
+    {storage_backend, riak_dets_backend}
+
+to
+
+    {storage_backend, innostore_riak}
+
+Also if you want, you can add a innostore section to the config, like the riak and
+sasl sections
+
+    %% Inno db config
+    {innostore, [
+                  {data_home_dir,            "/mnt/innodb"},
+                  {log_group_home_dir,       "/mnt/innodb"},
+                  {buffer_pool_size,         2147483648}, %% 2G of buffer
+                  {thread_concurrency,       0},
+                  {flush_log_at_trx_commit,  2},
+                  {max_dirty_pages_pct,      75},
+                  {thread_sleep_delay,       10}
+                 ]}
+     
+Personally I used
+
+    {innostore, [
+                  {data_home_dir,            "/usr/local/var/lib/riak-innostore"},
+                  {log_group_home_dir,       "/usr/local/var/lib/riak-innostore"}
+                 ]},
+
+make sure to
+
+    mkdir /usr/local/var/lib/riak-innostore
