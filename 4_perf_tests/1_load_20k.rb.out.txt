@@ -1,0 +1,95 @@
+** Loading bucket **
+Bucket load (get all keys) execution time: 187.242056s
+** Bucket with 20000 loaded **
+** Deleting keys
+Deleted 1000 entries
+Deleted 2000 entries
+Deleted 3000 entries
+Deleted 4000 entries
+Deleted 5000 entries
+Deleted 6000 entries
+Deleted 7000 entries
+Deleted 8000 entries
+Deleted 9000 entries
+Deleted 10000 entries
+Deleted 11000 entries
+Deleted 12000 entries
+Deleted 13000 entries
+Deleted 14000 entries
+Deleted 15000 entries
+Deleted 16000 entries
+Deleted 17000 entries
+Deleted 18000 entries
+Deleted 19000 entries
+Deleted 20000 entries
+Delete all keys execution time: 82.879015s
+** Inserting 20k items **
+Saving item 1000
+Saving item 2000
+Saving item 3000
+Saving item 4000
+Saving item 5000
+Saving item 6000
+Saving item 7000
+Saving item 8000
+Saving item 9000
+Saving item 10000
+Saving item 11000
+Saving item 12000
+Saving item 13000
+Saving item 14000
+Saving item 15000
+Saving item 16000
+Saving item 17000
+Saving item 18000
+Saving item 19000
+Saving item 20000
+Insert 20k items execution time: 95.049053s
+** Loading bucket **
+Bucket load (get all keys) execution time: 187.242056s
+** Bucket with 20000 loaded **
+** Deleting keys
+Deleted 1000 entries
+Deleted 2000 entries
+Deleted 3000 entries
+Deleted 4000 entries
+Deleted 5000 entries
+Deleted 6000 entries
+Deleted 7000 entries
+Deleted 8000 entries
+Deleted 9000 entries
+Deleted 10000 entries
+Deleted 11000 entries
+Deleted 12000 entries
+Deleted 13000 entries
+Deleted 14000 entries
+Deleted 15000 entries
+Deleted 16000 entries
+Deleted 17000 entries
+Deleted 18000 entries
+Deleted 19000 entries
+Deleted 20000 entries
+Delete all keys execution time: 82.879015s
+** Inserting 20k items **
+Saving item 1000
+Saving item 2000
+Saving item 3000
+Saving item 4000
+Saving item 5000
+Saving item 6000
+Saving item 7000
+Saving item 8000
+Saving item 9000
+Saving item 10000
+Saving item 11000
+Saving item 12000
+Saving item 13000
+Saving item 14000
+Saving item 15000
+Saving item 16000
+Saving item 17000
+Saving item 18000
+Saving item 19000
+Saving item 20000
+Insert 20k items execution time: 95.049053s
+

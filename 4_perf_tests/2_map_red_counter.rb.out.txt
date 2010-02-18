@@ -1,0 +1,2 @@
+20000
+Simple sum M/R execution time: 10.674185s

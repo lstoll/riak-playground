@@ -32,7 +32,7 @@ This can probably be done more effiecently with key streaming. Look into mapred_
 
     linc@127.0.0.1)4> {ok, Keys} = C:list_keys(<<"test5">>),
     (linc@127.0.0.1)4> lists:map(fun(Key)->
-    (linc@127.0.0.1)4> C:delete(Name, Key, 1)
+    (linc@127.0.0.1)4> C:delete(<<"test5">>, Key, 1)
     (linc@127.0.0.1)4> end, Keys).
 
 
@@ -71,9 +71,15 @@ sasl sections
 Personally I used
 
     {innostore, [
-                  {data_home_dir,            "/usr/local/var/lib/riak-innostore"},
-                  {log_group_home_dir,       "/usr/local/var/lib/riak-innostore"}
-                 ]},
+        {data_home_dir,            "/usr/local/var/lib/riak-innostore"},
+        {log_group_home_dir,       "/usr/local/var/lib/riak-innostore"},
+        {buffer_pool_size,  536870912}, %% 512m of buffer
+        {thread_concurrency,       0},
+        {flush_log_at_trx_commit,  2},
+        {max_dirty_pages_pct,      75},
+        {thread_sleep_delay,       10}
+        ]},     
+
 
 make sure to
 
