@@ -1,0 +1,9 @@
+** Create two dummy objects **
+** Create a third object, linking to the first two as 'parent' **
+"** Walk the Parent Link **"
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test5/item2 [application/json]:"{'item': 'two'}">,
+  #<Riak::RObject http://127.0.0.1:8098/raw/test5/item1 [application/json]:"{'item': 'one'}">]]
+"** Remove one of the links **"
+"** Walk the Parent Link again **"
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test5/item2 [application/json]:"{'item': 'two'}">]]
+
