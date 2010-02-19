@@ -1,0 +1,11 @@
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/999 [application/javascript]:"{\"item\":\"one\",\"batch\":99}">]]
+Traverse 1 links execution time: 0.180818s
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/14999 [application/javascript]:"{\"item\":\"one\",\"batch\":1499}">]]
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/14995 [application/javascript]:"{\"item\":\"one\",\"batch\":1499}">]]
+Traverse 5 links execution time: 0.340732s
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/9990 [application/javascript]:"{\"item\":\"one\",\"batch\":999}">]]
+Traverse 10 links execution time: 0.547865s
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/4999 [application/javascript]:"{\"item\":\"one\",\"batch\":499}">]]
+[[#<Riak::RObject http://127.0.0.1:8098/raw/test4/4950 [application/javascript]:"{\"item\":\"one\",\"batch\":495}">]]
+Traverse 50 links execution time: 0.695869s
+
